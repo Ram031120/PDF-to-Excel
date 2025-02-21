@@ -4,7 +4,7 @@ import pandas as pd
 import io
 
 # Title of the Streamlit app
-st.title("Anil PDF to Excel Converter")
+st.title("RT Knits PDF to Excel Converter")
 
 # Upload PDF file
 uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
