@@ -1,0 +1,6 @@
+streamlit
+pandas
+tabula-py
+openpyxl
+PyMuPDF
+numpy
