@@ -47,4 +47,4 @@ if uploaded_file:
 
 # Add Copyright Notice at the Bottom
 st.markdown("---")  # Adds a horizontal line for separation
-st.markdown("<p style='text-align: center;'>© , 2025. All rights reserved.</p>", unsafe_allow_html=True)
+# st.markdown("<p style='text-align: center;'>© Foona Cai BiFen , 2025. All rights reserved.</p>", unsafe_allow_html=True)
