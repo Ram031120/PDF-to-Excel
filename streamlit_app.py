@@ -33,6 +33,15 @@ if uploaded_file:
         output = io.BytesIO()
         with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
             df.to_excel(writer, sheet_name="Sheet1", index=False)
+
+        # Prepare copyright statement
+        copyright_text = "© Your Name, 2025. All rights reserved."
+
+        # Add copyright text to the Excel file
+        workbook = writer.book
+        worksheet = writer.sheets["Sheet1"]
+        worksheet.set_header('&L' + copyright_text)
+
         output.seek(0)
 
         # Download button for Excel file
