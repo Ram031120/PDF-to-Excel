@@ -33,15 +33,6 @@ if uploaded_file:
         output = io.BytesIO()
         with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
             df.to_excel(writer, sheet_name="Sheet1", index=False)
-
-        # Prepare copyright statement
-        copyright_text = "© Your Name, 2025. All rights reserved."
-
-        # Add copyright text to the Excel file
-        workbook = writer.book
-        worksheet = writer.sheets["Sheet1"]
-        worksheet.set_header('&L' + copyright_text)
-
         output.seek(0)
 
         # Download button for Excel file
@@ -53,3 +44,7 @@ if uploaded_file:
         )
     else:
         st.error("No tables found in the PDF.")
+
+# Add Copyright Notice at the Bottom
+st.markdown("---")  # Adds a horizontal line for separation
+st.markdown("<p style='text-align: center;'>© Anil, 2025. All rights reserved.</p>", unsafe_allow_html=True)
